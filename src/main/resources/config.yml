@@ -1,0 +1,53 @@
+#----------------------------------#
+#                                  #
+#          MySQL Options           #
+#                                  #
+#----------------------------------#
+MySQL:
+  Host: localhost
+  Port: 3306
+  Database:
+  User: root
+  Password: password
+
+#----------------------------------#
+#                                  #
+#         Discord Options          #
+#                                  #
+#----------------------------------#
+Discord:
+# Discord Bot Token
+  Token:
+
+# Discord Server ID
+  Server:
+
+# TextChannels
+  Queue:
+  Result:
+
+# VoiceChannels
+  Team1:
+  Team2:
+
+#----------------------------------#
+#                                  #
+# Gamemodes:   CTW, KOTH, CTF, 5CP #
+#                                  #
+#----------------------------------#
+Maps:
+  Map1:
+    name: ""
+    gamemode: CTW
+  Map2:
+    name: ""
+    gamemode: KOTH
+  Map3:
+    name: ""
+    gamemode: KOTH
+  Map4:
+    name: ""
+    gamemode: CTF
+  Map5:
+    name: ""
+    gamemode: CTF
