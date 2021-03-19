@@ -281,7 +281,7 @@ public class MatchListener implements Listener {
 
   @Command(
       aliases = {"rejoin"},
-      desc = "Rejoin team's discord voice channel")
+      desc = "改めてチームのボイスチャンネルに入る")
   public void rejoinVC(@Sender Player player) {
     RankedPlayer rankedPlayer = manager.getPlayer(player.getUniqueId());
     Member member = Ranked.get().getGuild().getMemberById(rankedPlayer.getDiscordId());
