@@ -98,6 +98,6 @@ public class DiscordListener extends ListenerAdapter {
         message(
             "discord.queue.leave",
             text(name).color(NamedTextColor.AQUA).decorate(TextDecoration.BOLD),
-            text(size).color(NamedTextColor.DARK_AQUA)));
+            text(size).color(NamedTextColor.RED)));
   }
 }
