@@ -13,7 +13,6 @@ import network.atria.Team.TeamManager;
 import org.bukkit.entity.Player;
 import tc.oc.pgm.api.PGM;
 import tc.oc.pgm.api.match.Match;
-import tc.oc.pgm.start.StartCountdown;
 
 public class ReadyCommand {
 
@@ -63,7 +62,7 @@ public class ReadyCommand {
           Audience players = Ranked.get().toEveryone();
           Match match = PGM.get().getMatchManager().getMatch(player);
 
-          cancelStartCountDown(match);
+          match.getCountdown().cancelAll();
           players.sendMessage(message("unready.team", rankedPlayer.getTeam().getColoredName()));
           rankedPlayer.getTeam().setReady(false);
         } else {
@@ -75,10 +74,5 @@ public class ReadyCommand {
         sender.sendMessage(message("command.captain.reject"));
       }
     }
-  }
-
-  private void cancelStartCountDown(Match match) {
-    if (!match.getCountdown().getAll(StartCountdown.class).isEmpty())
-      match.getCountdown().cancelAll(StartCountdown.class);
   }
 }
