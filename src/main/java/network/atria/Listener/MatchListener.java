@@ -27,6 +27,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
+import tc.oc.pgm.api.match.Match;
 import tc.oc.pgm.api.match.event.MatchFinishEvent;
 import tc.oc.pgm.api.match.event.MatchLoadEvent;
 import tc.oc.pgm.api.match.event.MatchStartEvent;
@@ -48,9 +49,17 @@ public class MatchListener implements Listener {
   @EventHandler(priority = EventPriority.MONITOR)
   public void onLeaveMatch(PlayerParticipationStopEvent event) {
     if (PhaseManager.checkPhase(Phase.PLAYING)) {
-      RankedPlayer player = manager.getPlayer(event.getPlayer());
-      Ranked.get().getDisconnectTask().countDisconnectTime(player, event.getMatch());
+      if (event.getPlayer().getBukkit().isBanned()) {
+        Match match = event.getMatch();
+
+        Ranked.get().getDisconnectTask().setPunished(true);
+        match.finish();
+        return;
+      }
     }
+
+    RankedPlayer player = manager.getPlayer(event.getPlayer());
+    Ranked.get().getDisconnectTask().countDisconnectTime(player, event.getMatch());
   }
 
   @EventHandler(priority = EventPriority.MONITOR)
