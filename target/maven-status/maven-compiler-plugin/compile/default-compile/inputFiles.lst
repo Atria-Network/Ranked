@@ -18,6 +18,7 @@ D:\programm\Java\Ranked\Ranked\src\main\java\network\atria\Ready\ReadyCommand.ja
 D:\programm\Java\Ranked\Ranked\src\main\java\network\atria\Pick\PickManager.java
 D:\programm\Java\Ranked\Ranked\src\main\java\network\atria\Listener\MatchListener.java
 D:\programm\Java\Ranked\Ranked\src\main\java\network\atria\Veto\VetoGUI.java
+D:\programm\Java\Ranked\Ranked\src\main\java\network\atria\Abandon\AbandonCommand.java
 D:\programm\Java\Ranked\Ranked\src\main\java\network\atria\Phase\Phase.java
 D:\programm\Java\Ranked\Ranked\src\main\java\network\atria\Veto\VetoManager.java
 D:\programm\Java\Ranked\Ranked\src\main\java\network\atria\Pick\PickCommand.java

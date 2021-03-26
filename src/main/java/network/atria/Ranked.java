@@ -20,6 +20,7 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.translation.GlobalTranslator;
 import net.kyori.adventure.translation.TranslationRegistry;
+import network.atria.Abandon.AbandonCommand;
 import network.atria.Discord.DiscordListener;
 import network.atria.Discord.DiscordManager;
 import network.atria.Listener.MatchListener;
@@ -105,6 +106,7 @@ public class Ranked extends JavaPlugin {
     root.registerCommands(new SelectionCaptain());
     root.registerCommands(new VetoCommand());
     root.registerCommands(new MatchListener());
+    root.registerCommands(new AbandonCommand());
     root.registerCommands(this);
 
     new BukkitIntake(this, commandGraph).register();

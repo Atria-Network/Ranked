@@ -24,5 +24,6 @@ network\atria\Ready\ReadyManager.class
 network\atria\Team\TeamManager.class
 network\atria\Utils\TextUtil.class
 network\atria\GUI$GUIManager.class
+network\atria\Abandon\AbandonCommand.class
 network\atria\RankedPlayer.class
 network\atria\GUI$GUIListener.class
