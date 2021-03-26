@@ -8,6 +8,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
+import network.atria.Abandon.AbandonCommand;
 import network.atria.Ranked;
 import network.atria.RankedPlayer;
 import network.atria.RankedTeam;
@@ -42,6 +43,9 @@ public class TeamManager {
             TEAM2_CHANNEL_ID,
             team2_players,
             null);
+
+    Ranked.get().getDisconnectTask().newMatch();
+    new AbandonCommand(); // 前回のMatchの棄権プレイヤーリストをリセット
   }
 
   public UUID getMatchId() {
